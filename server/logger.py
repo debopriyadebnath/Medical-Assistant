@@ -19,6 +19,9 @@ logger=setup_logger()
 
 
 logger.info("RAG process started")
+logger.debug("Debugging")
+logger.error("Failed to load")
+logger.critical("critical message")
     
 
                  
