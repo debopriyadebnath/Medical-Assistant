@@ -23,9 +23,9 @@ os.makedirs(UPLOAD_DIR, exist_ok=True)
 #initialize pinecone instance
 pc=Pinecone(api_key=PINECONE_API_KEY)
 spec=ServerlessSpec(cloud="aws",region=PINECONE_ENV)
-existing_indexes= [i["name"]for i in pc.list_indexces()]
+existing_indexes= [i["name"]for i in pc.list_indexes()]
 
-if PINECONE_INDEX_NAME not in existing_indexces:
+if PINECONE_INDEX_NAME not in existing_indexes:
     pc.create_index(
         name= PINECONE_INDEX_NAME,
         dimension=768,

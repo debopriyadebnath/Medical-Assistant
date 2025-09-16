@@ -8,3 +8,30 @@ wheels/
 
 # Virtual environments
 .venv
+env
+.env
+/env
+/server/env
+/venv
+*env
+*venv
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+server/env/
+.env
+venv/
+ENV/
+
+# Ignore editor/IDE settings
+.vscode/
+.idea/
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
