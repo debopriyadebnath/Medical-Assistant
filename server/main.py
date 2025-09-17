@@ -25,4 +25,4 @@ app.include_router(ask_router)
 # A simple GET route
 @app.get("/")
 def root():
-    return {"message": "Welcome to the Medical Assistant API"}
+    return {"message": "please Welcome to the Medical Assistant API"}
