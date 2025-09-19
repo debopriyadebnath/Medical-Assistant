@@ -49,7 +49,7 @@ def load_vectorstore(uploaded_files):
         file_paths.append(str(save_path))
 
     #2.split
-    for file_path in file_path:
+    for file_path in file_paths:
         loader=PyPDFLoader(file_path)
         documents=loader.load()
 
@@ -58,7 +58,7 @@ def load_vectorstore(uploaded_files):
 
         texts=[chunk.page_content for chunk in chunks]
         metadata=[chunk.metadata for chunk in chunks]
-        ids= [f"{Path(file_path).stem}-{i}"for i in range (chunks)]
+        ids= [f"{Path(file_path).stem}-{i}"for i in range (len(chunks))]
     #3.Embedding
         print(f"Embedding chunks")
         embedding=embed_model.embed_documents(texts)
